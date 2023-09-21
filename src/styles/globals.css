@@ -2,26 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+        display: none;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@layer components {
+    @font-face {
+        font-family: 'dana';
+        src: url('/assets/fonts/DanaFaNum-Regular.woff2');
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    }
+
+    @font-face {
+        font-family: 'dana bold';
+        src: url('/assets/fonts/DanaFaNum-DemiBold.woff2');
+
+    }
+
+    @font-face {
+        font-family: 'dana medium';
+        src: url('/assets/fonts/DanaFaNum-Medium.woff2');
+
+    }
+
+    body {
+        direction: rtl;
+        font-family: dana;
+        background-color: #F9FAFF;
+    }
+    .container{
+        padding: 0 8px;
+    }
+
 }

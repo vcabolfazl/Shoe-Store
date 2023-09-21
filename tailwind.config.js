@@ -7,11 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      container: {
+        center: true
       },
+      fontFamily: {
+        "dana": "dana",
+        "danaB": "dana bold",
+        "danaM": "dana medium",
+      },
+      colors: {
+        "purple": "#7854F7",
+        "NavyBlue": "#272D4E",
+      }
     },
   },
   plugins: [],
