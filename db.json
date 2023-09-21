@@ -1,19 +1,67 @@
 {
- "posts": [
+ "Product": [
   {
    "id": 1,
-   "title": "json-server",
-   "author": "typicode"
-  }
- ],
- "comments": [
+   "title": "کفش پیاده روی مدل NOV-BK",
+   "img": "/assets/Images/products/Product1.png",
+   "price": 360000,
+   "stars": 5
+  },
   {
-   "id": 1,
-   "body": "some comment",
-   "postId": 1
+   "id": 2,
+   "title": "کفش اسپرت سارزی",
+   "img": "/assets/Images/products/Product2.png",
+   "price": 380000,
+   "stars": 5
+  },
+  {
+   "id": 3,
+   "title": "کفش راحتی کد 210",
+   "img": "/assets/Images/products/Product3.png",
+   "price": 240000,
+   "stars": 5
+  },
+  {
+   "id": 4,
+   "title": "کفش پیاده روی مدل NOV-BK",
+   "img": "/assets/Images/products/Product1.png",
+   "price": 360000,
+   "stars": 5
+  },
+  {
+   "id": 5,
+   "title": "کفش اسپرت سارزی",
+   "img": "/assets/Images/products/Product2.png",
+   "price": 380000,
+   "stars": 5
+  },
+  {
+   "id": 6,
+   "title": "کفش راحتی کد 210",
+   "img": "/assets/Images/products/Product3.png",
+   "price": 240000,
+   "stars": 5
+  },
+  {
+   "id": 7,
+   "title": "کفش پیاده روی مدل NOV-BK",
+   "img": "/assets/Images/products/Product1.png",
+   "price": 360000,
+   "stars": 5
+  },
+  {
+   "id": 8,
+   "title": "کفش اسپرت سارزی",
+   "img": "/assets/Images/products/Product2.png",
+   "price": 380000,
+   "stars": 5
+  },
+  {
+   "id": 9,
+   "title": "کفش راحتی کد 210",
+   "img": "/assets/Images/products/Product3.png",
+   "price": 240000,
+   "stars": 5
   }
- ],
- "profile": {
-  "name": "typicode"
- }
+ ]
 }
