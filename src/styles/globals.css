@@ -36,8 +36,12 @@
         font-family: dana;
         background-color: #F9FAFF;
     }
-    .container{
+
+    .container {
         padding: 0 8px;
     }
 
+    .swiper-pagination-bullet-active {
+        background: #7854F7 !important; 
+    }
 }

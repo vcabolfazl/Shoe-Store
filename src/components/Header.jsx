@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Header() {
  return (
-  <header className='w-full fixed py-7 text-NavyBlue font-danaM'>
+  <header className='w-full fixed pt-7 text-NavyBlue font-danaM top-0 z-50 bg-white'>
    <div className="container grid grid-cols-2 md:grid-cols-3 justify-between items-center">
 
     {/* Start Right side */}
@@ -107,7 +107,7 @@ export default function Header() {
     </ul>
     <div className="group">
 
-     <svg className="w-6 h-6 left-0 right-0 mx-auto">
+     <svg className="w-6 h-6 left-0 right-0 mx-auto block md:hidden">
       <use href='#menu'></use>
      </svg>
      <ul className='hidden group-hover:grid md:hidden gap-y-5 text-center mt-4'>
