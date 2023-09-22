@@ -41,7 +41,7 @@
         padding: 0 8px;
     }
 
-    .swiper-pagination-bullet-active {
-        background: #7854F7 !important; 
+    .Discount-banner {
+        background: linear-gradient(90deg, #F3395A, #B92241)
     }
 }
