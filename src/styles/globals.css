@@ -42,6 +42,14 @@
     }
 
     .Discount-banner {
-        background: linear-gradient(90deg, #F3395A, #B92241)
+        background: linear-gradient(#F3395A, #B92241)
+    }
+
+    .Wonders-day-offer {
+        background: linear-gradient(#7854F7, #0E38B0)
+    }
+
+    .Autumn-offer {
+        background: linear-gradient(#DC0278, #9D035A)
     }
 }

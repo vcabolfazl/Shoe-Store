@@ -19,9 +19,9 @@ export default function Home() {
   const { productsData } = useQuery("products", () => {
     return fetch("http://localhost:4000/Product").then(res => res.json()).then(data => setProducts(data))
   })
-  // const products = fetch("http://localhost:4000/Product").then(res => res.json()).then(data => console.log(data))
   return (
     <>
+
       <section className=''>
         <div className="container mt-36 sm:mt-44">
           <Swiper
@@ -129,6 +129,89 @@ export default function Home() {
               fillOpacity={0.25}
             />
           </svg>
+        </div>
+      </section>
+
+      <section>
+        <div className="container grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-12 mt-8">
+          {
+            products?.reverse().slice(0, 4).map(product => <ProductCard {...product} />)
+          }
+        </div>
+      </section>
+
+      <section>
+        <div className="container grid grid-cols-1 md:grid-cols-2 gap-14 mt-8 text-white">
+          <div className="Autumn-offer relative rounded-lg flex gap-y-5 flex-wrap sm:flex-nowrap items-center justify-between p-12">
+            <svg className='absolute top-0 left-5'
+              xmlns="http://www.w3.org/2000/svg"
+              width={95}
+              height={298}
+              viewBox="0 0 95 298"
+              fill="none"
+            >
+              <path
+                d="M0 0.181168H95V267.181C95 283.75 81.5685 297.181 65 297.181H30C13.4315 297.181 0 283.75 0 267.181V0.181168Z"
+                fill="#C6598F"
+                fillOpacity={0.25}
+              />
+            </svg>
+            <div className="z-20">
+              <p className='text-2xl font-danaB mb-2'>فروش پاییزه</p>
+              <p className='mb-5'>50% تخفیف تمامی کفش ها در حراج کده بهارستان 1402</p>
+
+              <Link href={"/"} className='z-20 font-danaB text-lg py-2.5 px-6 bg-white/30 rounded-lg'>دیدن همه محصولات</Link>
+            </div>
+            <img className='z-20 left-0 right-0 mx-auto' src="/assets/Images/offers.png" alt="" />
+            <svg className='absolute bottom-0 right-5'
+              xmlns="http://www.w3.org/2000/svg"
+              width={95}
+              height={298}
+              viewBox="0 0 95 298"
+              fill="none"
+            >
+              <path
+                d="M95 297.181H0L0 30.1811C0 13.6126 13.4315 0.181152 30 0.181152H65C81.5685 0.181152 95 13.6126 95 30.1812L95 297.181Z"
+                fill="#C6598F"
+                fillOpacity={0.25}
+              />
+            </svg>
+          </div>
+          <div className="Wonders-day-offer relative rounded-lg flex gap-y-5 flex-wrap sm:flex-nowrap items-center justify-between p-12">
+            <svg className='absolute top-0 left-5'
+              xmlns="http://www.w3.org/2000/svg"
+              width={95}
+              height={298}
+              viewBox="0 0 95 298"
+              fill="none"
+            >
+              <path
+                d="M0 0.181168H95V267.181C95 283.75 81.5685 297.181 65 297.181H30C13.4315 297.181 0 283.75 0 267.181L0 0.181168Z"
+                fill="#157EF7"
+                fillOpacity={0.15}
+              />
+            </svg>
+            <div className="z-20">
+              <p className='text-2xl font-danaB mb-2'>شگفت انگیز های روز</p>
+              <p className='mb-5'>50% تخفیف تمامی کفش ها در حراج کده بهارستان 1402</p>
+              <Link href={"/"} className='z-20 font-danaB text-lg py-2.5 px-6 bg-white/30 rounded-lg'>رفتن به حراج کده</Link>
+            </div>
+            <img className='z-20 left-0 right-0 mx-auto' src="/assets/Images/offers1.png" alt="" />
+
+            <svg className='absolute bottom-0 right-5'
+              xmlns="http://www.w3.org/2000/svg"
+              width={95}
+              height={298}
+              viewBox="0 0 95 298"
+              fill="none"
+            >
+              <path
+                d="M95 297.181H0L0 30.1812C0 13.6126 13.4315 0.181152 30 0.181152H65C81.5685 0.181152 95 13.6126 95 30.1812L95 297.181Z"
+                fill="#157EF7"
+                fillOpacity={0.15}
+              />
+            </svg>
+          </div>
         </div>
       </section>
     </>
