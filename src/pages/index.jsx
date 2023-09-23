@@ -8,17 +8,33 @@ import 'swiper/css/pagination';
 
 
 // import required modules
-import { Pagination } from 'swiper/modules'
+import { Pagination, Autoplay } from 'swiper/modules'
 import Link from 'next/link';
 import ProductCard from '@/components/ProductCard';
 import { useQuery } from 'react-query';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+
   const [products, setProducts] = useState([])
   const { productsData } = useQuery("products", () => {
-    return fetch("http://localhost:4000/Product").then(res => res.json()).then(data => setProducts(data))
+    return fetch("http://localhost:4000/Product").then(res => res.json()).then(data => {
+      setProducts(data)
+      setSliderProducts(data)
+    })
   })
+
+  const [sliderProducts, setSliderProducts] = useState([])
+  const [sliderStatus, setSliderStatus] = useState("new")
+
+  useEffect(() => {
+    if (sliderStatus === "sele") {
+      const NewLayout = sliderProducts?.filter(products => products).sort((a, b) => a.saleNum - b.saleNum)
+      setSliderProducts(NewLayout)
+    } else if (sliderStatus === "new") {
+      setSliderProducts(products)
+    }
+  }, [sliderStatus])
   return (
     <>
 
@@ -135,7 +151,7 @@ export default function Home() {
       <section>
         <div className="container grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-12 mt-8">
           {
-            products?.reverse().slice(0, 4).map(product => <ProductCard {...product} />)
+            products?.reverse().slice(0, 4).map(product => <ProductCard key={product.id} {...product} />)
           }
         </div>
       </section>
@@ -212,6 +228,57 @@ export default function Home() {
               />
             </svg>
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-12 mt-8">
+          {
+            products?.reverse().slice(4, 8).map(product => <ProductCard key={product.id} {...product} />)
+          }
+        </div>
+      </section>
+
+      <section>
+        <div className="relative container mt-14">
+          <div className=" w-full flex items-center justify-center gap-x-8 border-b-2 mb-14 font-danaB">
+            <span onClick={() => setSliderStatus("new")} className={`pb-4 border-[#00CD90] ${sliderStatus === "new" ? "border-b-4" : null}`}>جدید ترین‌ها</span>
+            <span onClick={() => setSliderStatus("sele")} className={`pb-4 border-[#00CD90] ${sliderStatus === "sele" ? "border-b-4" : null}`}>پرفروش ترین‌ها</span>
+
+          </div>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={10}
+            pagination={{
+              clickable: true,
+            }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+              },
+            }}
+            modules={[Pagination, Autoplay]}
+            className="mySwiper"
+          >
+            {
+              sliderProducts?.map(product => <SwiperSlide className='mb-14' key={product.id}><ProductCard {...product} /></SwiperSlide>)
+            }
+
+          </Swiper>
+          <div className="absolute bg-[#F5E6FF] w-full bottom-0 left-0 right-0 h-[50%] z-[0]"></div>
         </div>
       </section>
     </>

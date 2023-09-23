@@ -5,63 +5,72 @@
    "title": "کفش پیاده روی مدل NOV-BK",
    "img": "/assets/Images/products/Product1.png",
    "price": 360000,
-   "stars": 5
+   "stars": 5,
+   "saleNum": 10
   },
   {
    "id": 2,
    "title": "کفش اسپرت سارزی",
    "img": "/assets/Images/products/Product2.png",
    "price": 380000,
-   "stars": 5
+   "stars": 5,
+   "saleNum": 15
   },
   {
    "id": 3,
    "title": "کفش راحتی کد 210",
    "img": "/assets/Images/products/Product3.png",
    "price": 240000,
-   "stars": 5
+   "stars": 5,
+   "saleNum": 11
   },
   {
    "id": 4,
    "title": "کفش پیاده روی مدل NOV-BK",
    "img": "/assets/Images/products/Product1.png",
    "price": 360000,
-   "stars": 5
+   "stars": 5,
+   "saleNum": 58
   },
   {
    "id": 5,
    "title": "کفش اسپرت سارزی",
    "img": "/assets/Images/products/Product2.png",
    "price": 380000,
-   "stars": 5
+   "stars": 5,
+   "saleNum": 45
   },
   {
    "id": 6,
    "title": "کفش راحتی کد 210",
    "img": "/assets/Images/products/Product3.png",
    "price": 240000,
-   "stars": 5
+   "stars": 5,
+   "saleNum": 35
   },
   {
    "id": 7,
    "title": "کفش پیاده روی مدل NOV-BK",
    "img": "/assets/Images/products/Product1.png",
    "price": 360000,
-   "stars": 5
+   "stars": 5,
+   "saleNum": 75
   },
   {
    "id": 8,
    "title": "کفش اسپرت سارزی",
    "img": "/assets/Images/products/Product2.png",
    "price": 380000,
-   "stars": 5
+   "stars": 5,
+   "saleNum": 15
   },
   {
    "id": 9,
    "title": "کفش راحتی کد 210",
    "img": "/assets/Images/products/Product3.png",
    "price": 240000,
-   "stars": 5
+   "stars": 5,
+   "saleNum": 1
   }
  ]
 }
