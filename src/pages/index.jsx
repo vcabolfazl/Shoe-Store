@@ -281,6 +281,19 @@ export default function Home() {
           <div className="absolute bg-[#F5E6FF] w-full bottom-0 left-0 right-0 h-[50%] z-[0]"></div>
         </div>
       </section>
+
+      <section>
+        <div className="container flex flex-wrap md:flex-nowrap gap-6 items-center justify-between my-16">
+          <div className="">
+            <p className='text-lg font-danaB text-NavyBlue mb-4'>ثبت نام در خبرنامه</p>
+            <p>اولین نفری باشید که از جدیدترین محصولات، جشنواره ها و فروش‌های ویژه ما مطلع می شوید.</p>
+          </div>
+          <form className='flex items-center justify-center flex-wrap md:flex-nowrap gap-6'>
+            <input className='border-2 border-gray-500 outline-none rounded-xl px-4 py-2 text-center w-80' type="number" placeholder='شماره موبایل' />
+            <input className='bg-purple px-10 py-3 rounded-xl text-white font-danaB' type="submit" value={"ارسال"} />
+          </form>
+        </div>
+      </section>
     </>
   )
 }
