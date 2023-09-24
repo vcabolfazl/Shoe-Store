@@ -37,7 +37,7 @@ export default function Home() {
   }, [sliderStatus])
   return (
     <>
-
+      {/* --> Start the Header slider */}
       <section className=''>
         <div className="container mt-36 sm:mt-44">
           <Swiper
@@ -96,6 +96,7 @@ export default function Home() {
 
         </div>
       </section>
+      {/* End the Header slider <-- */}
 
       {/* --> Start New Products section */}
       <section className='my-16'>
@@ -111,6 +112,7 @@ export default function Home() {
       </section>
       {/* End New Products section <-- */}
 
+      {/* --> Start discount banner */}
       <section>
         <div className="container Discount-banner relative flex flex-wrap sm:flex-nowrap justify-between items-center rounded-lg px-12 py-16">
           <svg className='absolute top-0 left-8'
@@ -147,7 +149,9 @@ export default function Home() {
           </svg>
         </div>
       </section>
+      {/* End discount banner <-- */}
 
+      {/* --> Start showing 4 posts */}
       <section>
         <div className="container grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-12 mt-8">
           {
@@ -155,9 +159,12 @@ export default function Home() {
           }
         </div>
       </section>
+      {/* Endshowing 4 posts <-- */}
 
+      {/* --> Start discount banners */}
       <section>
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-14 mt-8 text-white">
+          {/* Start Right Side */}
           <div className="Autumn-offer relative rounded-lg flex gap-y-5 flex-wrap sm:flex-nowrap items-center justify-between p-12">
             <svg className='absolute top-0 left-5'
               xmlns="http://www.w3.org/2000/svg"
@@ -193,6 +200,9 @@ export default function Home() {
               />
             </svg>
           </div>
+          {/* End Right Side */}
+
+          {/* Start Left Side */}
           <div className="Wonders-day-offer relative rounded-lg flex gap-y-5 flex-wrap sm:flex-nowrap items-center justify-between p-12">
             <svg className='absolute top-0 left-5'
               xmlns="http://www.w3.org/2000/svg"
@@ -228,9 +238,13 @@ export default function Home() {
               />
             </svg>
           </div>
+          {/* End Left Side */}
+
         </div>
       </section>
+      {/* End discount banners <-- */}
 
+      {/* --> Start showing 4 posts */}
       <section>
         <div className="container grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-12 mt-8">
           {
@@ -238,7 +252,9 @@ export default function Home() {
           }
         </div>
       </section>
+      {/* Endshowing 4 posts <-- */}
 
+      {/* --> Start of the slider of the latest and best-selling products */}
       <section>
         <div className="relative container mt-14">
           <div className=" w-full flex items-center justify-center gap-x-8 border-b-2 mb-14 font-danaB">
@@ -281,7 +297,9 @@ export default function Home() {
           <div className="absolute bg-[#F5E6FF] w-full bottom-0 left-0 right-0 h-[50%] z-[0]"></div>
         </div>
       </section>
+      {/* End of the slider of the latest and best-selling products <-- */}
 
+      {/* --> Start Newsletters */}
       <section>
         <div className="container flex flex-wrap md:flex-nowrap gap-6 items-center justify-between my-16">
           <div className="">
@@ -294,6 +312,8 @@ export default function Home() {
           </form>
         </div>
       </section>
+      {/* End Newsletters <-- */}
+
     </>
   )
 }

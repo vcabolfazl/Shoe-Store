@@ -4,7 +4,9 @@ import React from 'react'
 export default function Footer() {
  return (
   <footer className='w-full bg-[#EBE6FE] border-y border-gray-400'>
-   <div className=" top py-5 border-b border-gray-400">
+
+   {/* Start The upper part of the footer */}
+   <div className="py-5 border-b border-gray-400">
     <div className="container  flex flex-wrap gap-5 items-center justify-center md:justify-between text-NavyBlue font-danaM">
      <p>پشتیبانی 24 ساعته در هر روز هفته</p>
      <p>تلفن پشتیبانی کالا: 5293792-021</p>
@@ -16,7 +18,10 @@ export default function Footer() {
      </ul>
     </div>
    </div>
-   <div className="center container">
+   {/* End The upper part of the footer */}
+
+   {/* Start middle of footer */}
+   <div className="container">
     <div className="flex flex-wrap gap-4 items-center justify-between py-8">
      <div className="flex items-center justify-between gap-20">
       <ul className='space-y-4'>
@@ -64,10 +69,15 @@ export default function Footer() {
      </div>
     </div>
    </div>
-   <div className="container botton py-5 border-y border-gray-400 text-center">
+   {/* End middle of footer */}
+
+   {/* Start bottom of footer */}
+   <div className="container py-5 border-y border-gray-400 text-center">
     <p>تمام حقوق مادی و معنوی این سایت متعلق به فروشگاه اینترنتی آرتین شاپ می باشد.</p>
-    <p className='mt-5 text-xs'>Designed by <Link className='font-danaB text-purple text-sm' href="https://www.figma.com/@farzane_m">Farzane Mojtabavi</Link> and developed and coded by <Link className='font-danaB text-purple text-sm' href={"https://github.com/vcabolfazl"}>Abolfazl Sharifi</Link></p>
+    <p className='mt-5 text-xs'>Designed by <Link className='font-danaB text-purple text-sm' href="https://www.figma.com/@farzane_m">Farzaneh Mojtabavi</Link> and developed and coded by <Link className='font-danaB text-purple text-sm' href={"https://github.com/vcabolfazl"}>Abolfazl Sharifi</Link></p>
    </div>
+   {/* End bottom of footer */}
+   
   </footer>
  )
 }
